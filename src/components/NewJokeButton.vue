@@ -1,5 +1,5 @@
 <template>
-  <v-btn @click="newJokes()" width="400px">Загрузить еще</v-btn>
+  <v-btn large @click="newJokes()" color="primary"> Загрузить еще </v-btn>
 </template>
 
 <script>

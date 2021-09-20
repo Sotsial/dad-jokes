@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-card elevation="2" outlined class="pa-1">
     <v-card-title>{{ joke.joke }}</v-card-title>
-  </div>
+  </v-card>
 </template>
 <script>
 export default {

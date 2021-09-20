@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <nav-bar />
-
     <router-view />
   </v-app>
 </template>

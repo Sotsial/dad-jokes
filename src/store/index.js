@@ -5,12 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    joke: "",
+    joke: {},
+    favoriteJokes: [],
   },
 
   mutations: {
     updateJokes(state, newJoke) {
       state.joke = newJoke;
+    },
+    addFavorite(state) {
+      state.favoriteJokes.push(state.joke);
+      console.log(state.favoriteJokes);
     },
   },
 
