@@ -31,7 +31,7 @@ export default new Vuex.Store({
   getters: {
     filterJokes(state) {
       return state.favoriteJokes.filter((joke) =>
-        joke.joke.includes(state.filter)
+        joke.joke.toLowerCase().includes(state.filter.toLowerCase())
       );
     },
   },

@@ -1,7 +1,7 @@
 <template>
   <h1>
     <v-app-bar color="primary" dark>
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title>Dad jokes</v-toolbar-title>
 
       <v-spacer />
       <v-btn to="/" class="ml-3" outlined>Главная</v-btn>
