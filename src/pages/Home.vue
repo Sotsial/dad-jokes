@@ -29,8 +29,9 @@ export default {
 
 <style scoped>
 .joke-card {
+  min-width: 50%;
   max-width: 600px;
-  min-width: 400px;
+
   min-height: 65px;
 }
 </style>
