@@ -8,14 +8,20 @@ export default new Vuex.Store({
     joke: {},
     favoriteJokes: [],
     filter: "",
+    added: false,
   },
 
   mutations: {
     updateJokes(state, newJoke) {
       state.joke = newJoke;
+      state.added = false;
     },
     addFavorite(state) {
-      state.favoriteJokes.push(state.joke);
+      if (!state.favoriteJokes.find((j) => j.id == state.joke.id)) {
+        state.favoriteJokes.push(state.joke);
+      }
+
+      state.added = true;
     },
     inputFilter(state, filter) {
       state.filter = filter;
