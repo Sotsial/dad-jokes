@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     joke: {},
     favoriteJokes: [],
+    filter: "",
   },
 
   mutations: {
@@ -15,7 +16,17 @@ export default new Vuex.Store({
     },
     addFavorite(state) {
       state.favoriteJokes.push(state.joke);
-      console.log(state.favoriteJokes);
+    },
+    inputFilter(state, filter) {
+      state.filter = filter;
+    },
+  },
+
+  getters: {
+    filterJokes(state) {
+      return state.favoriteJokes.filter((joke) =>
+        joke.joke.includes(state.filter)
+      );
     },
   },
 

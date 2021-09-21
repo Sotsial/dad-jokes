@@ -1,6 +1,7 @@
 <template>
-  <v-card elevation="2" outlined class="pa-1">
+  <v-card elevation="2" outlined>
     <v-card-title>{{ joke.joke }}</v-card-title>
+    <v-card-subtitle class="subtitle">ID: {{ joke.id }}</v-card-subtitle>
   </v-card>
 </template>
 <script>
@@ -13,3 +14,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-card__subtitle {
+  padding: 5px 15px;
+}
+</style>
